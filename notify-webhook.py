@@ -267,7 +267,7 @@ def make_json(old, new, ref):
     return json.dumps(data)
 
 def post(url, data):
-    opener = urllib.request.HTTPHandler
+    opener = urllib.request.build_opener(urllib.request.HTTPHandler)
     headers = {
         'Content-Type': POST_CONTENTTYPE,
         'X-GitHub-Event': 'push',
